@@ -4,9 +4,10 @@ from foodtracker_locators import *
 from selenium.webdriver.common.by import By
 from desired_capabilities import turn_off_autocorrection
 
-APP = "/Users/u531068/Library/Developer/CoreSimulator/Devices/" \
-      "889063A6-B23E-480B-AA76-E85C2FBA8029/data/Containers/Bundle/Application/" \
-      "3AB17A18-2F9C-4DC6-B7B9-E231F14704CF/FoodTracker.app"
+
+
+# App path: "/Users/<USER_NAME>/Library/Developer/CoreSimulator/Devices/<DEVICE_UDID>/data/Containers/Bundle/Application/<APPLICATION_ID>/<APP_NAME>.app"
+APP = None  # Path to your app. Possible patter:
 
 
 class FoodTrackerTest(unittest.TestCase):
