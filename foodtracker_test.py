@@ -2,20 +2,18 @@ import unittest
 from appium import webdriver
 from foodtracker_locators import *
 from selenium.webdriver.common.by import By
-from desired_capabilities import turn_off_autocorrection
-
-
+from desired_capabilities import switch_auto_correction_in_settings
 
 # App path: "/Users/<USER_NAME>/Library/Developer/CoreSimulator/Devices/<DEVICE_UDID>/data/Containers/Bundle/Application/<APPLICATION_ID>/<APP_NAME>.app"
-APP = None  # Path to your app. Possible patter:
+APP = None
 
 
 class FoodTrackerTest(unittest.TestCase):
 
     def setUp(self):
 
-        # Switch autocorection
-        #turn_off_autocorrection()
+        # Switch auto correction
+        # switch_auto_correction_in_settings()
 
         desired_capabilities = {
             'platformName': 'iOS',
@@ -31,11 +29,11 @@ class FoodTrackerTest(unittest.TestCase):
 
     def test_add_new_photo_with_max_rate(self):
 
-        print("1. Check list size")
+        print("\nStart FoodTracker app test...\n1. Check list size")
         meal_list = len(self.driver.find_elements(By.XPATH, MEALS_LIST))
         print("\n\tMeals before add: {0}\n".format(meal_list))
 
-        print("2. Click Add button, add photo from cammera roll")
+        print("2. Click Add button, add photo from camera roll")
         self.driver.find_element(By.ID, ADD_BUTTON).click()
         self.driver.find_element(By.ID, DEFAULT_PHOTO).click()
         self.driver.find_element(By.XPATH, CAMERA_ROLL_CELL).click()

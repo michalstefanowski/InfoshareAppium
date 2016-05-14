@@ -1,3 +1,6 @@
+"""
+Locators extracted with Appium Inspector
+"""
 # Your Meals view locators
 EDIT_BUTTON     = "Edit"
 ADD_BUTTON      = "Add"
