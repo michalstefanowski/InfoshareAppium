@@ -13,7 +13,8 @@ class FoodTrackerTest(unittest.TestCase):
 
     def setUp(self):
 
-        turn_off_autocorrection()
+        # Switch autocorection
+        #turn_off_autocorrection()
 
         desired_capabilities = {
             'platformName': 'iOS',
